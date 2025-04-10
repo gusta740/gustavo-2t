@@ -1,9 +1,10 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform, Pressable } from 'react-native';
 import {Alert, Button,  View} from 'react-native';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { router } from 'expo-router';
 
 export default function HomeScreen() {
   return (
@@ -18,7 +19,20 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">nice banco bro</ThemedText>
         <HelloWave />
-      </ThemedView>
+      </ThemedView><Pressable
+          onPress={() => router.push('/explore')}
+          style={({ pressed }) => ({
+            backgroundColor: pressed ? '#fdfffe' : '#fdfffe', // Escurece quando pressionado
+            padding: 6,
+            borderRadius: 30,
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: 38,
+            transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }], // Efeito de "afundar"
+          })}
+        >
+          <ThemedText style={{ color: '', fontWeight: 'bold' }}>PIX</ThemedText>
+        </Pressable>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Saldo:R$ 323,91</ThemedText>
         <ThemedText>
