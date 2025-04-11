@@ -31,7 +31,7 @@ export default function HomeScreen() {
             transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }], // Efeito de "afundar"
           })}
         >
-          <ThemedText style={{ color: '', fontWeight: 'bold' }}>PIX</ThemedText>
+          <ThemedText style={{ color: 'green', fontWeight: 'bold' }}>PIX</ThemedText>
         </Pressable>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Saldo:R$ 323,91</ThemedText>
@@ -45,13 +45,11 @@ export default function HomeScreen() {
               web: ''
             })}
           </ThemedText>{' '}
-          <Button color={"#04971a"}
-  onPress={() => {
-    console.log('You tapped the button!');
-  }}
-  title="PIX"
+          
+
+
   
-/>
+
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
@@ -67,7 +65,7 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold"></ThemedText> {' '}
           <ThemedText type="defaultSemiBold"></ThemedText> {' '}
           <ThemedText type="defaultSemiBold"></ThemedText> {' '}
-          <ThemedText type="defaultSemiBold"></ThemedText>.
+          <ThemedText type="defaultSemiBold"></ThemedText>
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
