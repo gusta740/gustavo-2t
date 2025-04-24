@@ -1,5 +1,5 @@
 import { StyleSheet, Image, Platform, Pressable } from 'react-native';
-
+import AntDesign from '@expo/vector-icons/AntDesign';
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -13,11 +13,8 @@ export default function TabTwoScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#FFFFFF', dark: '#04971a' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
+        <Image
+          
         />
       }>
       <ThemedView style={styles.titleContainer}>
@@ -35,7 +32,7 @@ export default function TabTwoScreen() {
             transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }], // Efeito de "afundar"
           })}
         >
-          <ThemedText style={{ color: 'green', fontWeight: 'bold' }}>ibagem</ThemedText>
+          <ThemedText style={{ color: 'green', fontWeight: 'bold' }}><AntDesign name="qrcode" size={35} color="black" /></ThemedText>
         </Pressable>
       <Collapsible title="Ver estrato">
         <ThemedText>
